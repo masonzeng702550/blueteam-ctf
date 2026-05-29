@@ -1,0 +1,31 @@
+Incident summary excerpt — synthetic data, safe to share publicly.
+
+On 2026-05-15 14:32 UTC, we observed HR-LAPTOP01 (192.168.10.42, internal)
+make outbound connections to 185.220.101.42 over TCP/443. The endpoint
+sample matched SHA-256 4a3b1c5d7e9f10112233445566778899aabbccddeeff00112233445566778899
+and was first reported by abuse@security-vendor.example.
+
+Suspicious URLs observed:
+  hxxps://malicious[.]example[.]com/payload.dll
+  hxxp://c2-fallback[.]example[.]net/beacon
+  hXXps://cdn-stage[.]example[.]org/login
+
+Hashes (mixed):
+  MD5    1a79a4d60de6718e8e5b326e338ae533
+  SHA1   da39a3ee5e6b4b0d3255bfef95601890afd80709
+  SHA256 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+Other indicators:
+  CVE-2026-12345
+  MITRE ATT&CK techniques observed: T1566.001, T1059.001, T1071.001
+
+Phishing sender:
+  attacker[at]free-mail[.]example
+  Reply-To: mailto[:]victim-target@corp.example
+
+BTC drop:
+  1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa  (note: this is the genesis-block BTC
+  address; included as a test fixture only)
+
+Internal addresses (should NOT appear in extractor output):
+  10.0.0.1   172.16.5.5   192.168.1.1   127.0.0.1

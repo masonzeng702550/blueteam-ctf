@@ -1,0 +1,1 @@
+../../../scripts/extract_iocs.py

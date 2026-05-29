@@ -1,0 +1,25 @@
+title: <Action-oriented imperative title>
+id: 00000000-0000-0000-0000-000000000000
+status: experimental
+description: |
+  One paragraph: WHAT behaviour is detected, WHY it is malicious, KNOWN false-positives.
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+author: <name>
+date: 2026/05/29
+tags:
+  - attack.execution
+  - attack.t1059.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: '\powershell.exe'
+    CommandLine|contains:
+      - ' -enc '
+      - ' -EncodedCommand '
+  condition: selection
+falsepositives:
+  - Legitimate admin scripts using encoded PowerShell
+level: high

@@ -1,0 +1,33 @@
+title: <Action-oriented imperative title>
+id: 00000000-0000-0000-0000-000000000000   # generate: python3 -c "import uuid; print(uuid.uuid4())"
+status: experimental                        # experimental | test | stable | deprecated | unsupported
+description: |
+  One paragraph: WHAT behaviour is detected, WHY it is malicious, and which
+  KNOWN false-positive sources you have considered.
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+  - <TI report URL>
+author: <name or handle>
+date: 2026/05/29
+modified: 2026/05/29
+tags:
+  - attack.execution
+  - attack.t1059.001
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection_image:
+    Image|endswith: '\powershell.exe'
+  selection_args:
+    CommandLine|contains:
+      - ' -enc '
+      - ' -EncodedCommand '
+      - ' -ec '
+  filter_legit_admin:
+    User|startswith: 'NT AUTHORITY\SYSTEM'
+  condition: selection_image and selection_args and not filter_legit_admin
+falsepositives:
+  - Legitimate administrator scripts that base64-encode multi-line PowerShell
+  - Some software installers (note examples here)
+level: high

@@ -1,0 +1,24 @@
+{
+  "name": "blueteam-ctf",
+  "version": "1.0.0",
+  "description": "Blue Team CTF skills and subagents for SOC tier-1 triage, DFIR investigation, threat hunting, detection engineering, and IR reporting. Built for CyberDefenders, LetsDefend, BTLO, HTB Sherlocks, AIS3, 金盾獎, and HITCON Cyber Range.",
+  "author": {
+    "email": "tjspsschool@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/<owner>/blueteam-ctf",
+  "skills": ["./skills"],
+  "agents": ["./agents"],
+  "tags": [
+    "blueteam",
+    "soc",
+    "dfir",
+    "threat-hunting",
+    "detection-engineering",
+    "ir",
+    "ctf",
+    "sigma",
+    "yara",
+    "mitre-attack"
+  ]
+}

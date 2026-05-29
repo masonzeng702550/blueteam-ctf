@@ -1,0 +1,33 @@
+# Investigation outputs (user-generated, may contain sensitive data)
+findings.md
+hunts.md
+report-*.md
+redactions.json
+redaction-map.json
+rules/
+
+# Sample / evidence directories
+evidence/
+samples/
+*.pcap
+*.pcapng
+*.evtx
+*.dmp
+*.mem
+*.raw
+*.E01
+*.AD1
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.pytest_cache/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
